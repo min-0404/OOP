@@ -14,5 +14,6 @@ int main()
     cin >> a >> b;
     sum = a + b;
     cout << "합은" << sum << endl;
+    cout << "실험용";
     return 0;
 }
