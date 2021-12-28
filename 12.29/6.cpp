@@ -5,9 +5,8 @@ using namespace std;
 double biggest(double* arr, int size)
 {
     int max = 0;
-    for(int i = 0; i < size; i++)
-        for(int j = i; j < size; j ++)
-            if(arr[max] > arr[i])
+    for(int i = 1; i < size; i++) // 순차 탐색으로 최대값 찾기
+            if(arr[max] < arr[i])
                 max = i;
     return arr[max];
 }
