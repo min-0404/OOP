@@ -1,14 +1,23 @@
-// 문자열 입력 받기 : C언어를 이용한 구닥다리 방법
+//클래스 작성해보기
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-int main ()
+class Complex
 {
-    cout << "주소를 입력하세요:";
-    
-    char address[100];
-    cin.getline(address, 100, '\n');
-
-    cout << "주소는 " << address << "입니다" << endl;
+private:
+    int a, b;
+public:
+    Complex(int x, int y): a(x), b(y) {}
+    void ShowComplex(); 
+};
+void Complex::ShowComplex()
+{
+    cout << a << b << endl;
+}
+int main()
+{
+    Complex x(4, 5);
+    Complex y(20, 10);
+    x.ShowComplex();
+    y.ShowComplex();
 }

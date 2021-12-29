@@ -1,19 +1,21 @@
+// string 변수에 다양한 연산자를 사용할 수 있단느 것이 핵심
+// string은 배열 기반 이다
 #include <iostream>
+#include <string>
 using namespace std;
 
-void swap(int* x, int* y)
+int main ()
 {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
+    string song("Falling in love with you");
+    string elvis("Elvis Presely");
+    string singer;
 
-int main()
-{
-    int a = 1;
-    int b = 2;
-    swap(a, b); // iostream 클래스에 이미 swap함수 정의되어 있어서 굳이 주소 넣지 않아도 변경 가능
-    //swap(&a, &b);
-    cout << a << " " << b << endl;
-    return 0;
+    cout << song + "를 부른 가수는";
+    cout << "힌트 : 첫글자는" << elvis[0] <<  "?";
+
+    getline(cin, singer);
+    if(singer == elvis)
+        cout << "맞았습니다";
+    else
+        cout << "틀렸습니다" + elvis + "입니다" << endl; 
 }

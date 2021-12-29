@@ -1,31 +1,14 @@
+// 문자열 입력 받기 : C++의 좋은 방법
 #include <iostream>
+#include <string> // string 헤더파일을 이용해보자
 using namespace std;
 
-int addArray(int* p, int size)
+int main ()
 {
-    int sum = 0;
-    for(int i = 0; i < size; i++)
-        sum += p[i];
-    return sum;
-}
+    cout << "주소를 입력하세요:";
+    
+    string address; // string 변수!!
+    getline(cin, address);
 
-void makeDouble(int* p, int size)
-{
-    for(int i = 0; i < size; i++)
-        p[i] *= 2;
-}
-void printArray(int* p, int size)
-{
-    for(int i = 0; i < size; i++)
-        cout << p[i] << " ";
-}
-
-int main()
-{
-    int n[] = {1, 2, 3, 4, 5};
-    int sum = addArray(n, 5);
-    cout << sum << endl;
-    makeDouble(n, 5);
-    printArray(n, 5);
-    return 0;
+    cout << "주소는 " << address << "입니다" << endl;
 }

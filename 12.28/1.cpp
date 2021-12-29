@@ -1,19 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int g = 20; // 전역 변수
-int add(int x, int y)
+namespace Grphic
 {
-    return x + y; 
+    int maximum = 100; // 반지름의 최대값
 }
-
-int main()
+namespace Math{
+    int maximum = 65536;
+    int add(int a, int b) { return a + b;}
+    int sub(int a, int b) { return a - b;}
+}
+int main ()
 {
-    int a, b, sum;
-    cout << "두 정수를 입력하세요";
-    cin >> a >> b;
-    sum = a + b;
-    cout << "합은" << sum << endl;
-    cout << "실험용";
-    return 0;
+    cout << Grphic::maximum << endl;
+    cout << "Interger Maximum : " << Math::maximum << endl;
+    cout << "Interger Add : " << Math::add(2,4) << endl;
 }

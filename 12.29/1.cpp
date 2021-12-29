@@ -1,18 +1,31 @@
+//클래스 작성해보기
 #include <iostream>
 using namespace std;
 
-namespace Grphic
+class Tower
 {
-    int maximum = 100; // 반지름의 최대값
-}
-namespace Math{
-    int maximum = 65536;
-    int add(int a, int b) { return a + b;}
-    int sub(int a, int b) { return a - b;}
-}
-int main ()
+private:
+    int height;
+public:
+    Tower() {height = 1;} // 2개의 생성자
+    Tower(int h) : height(h) {}
+    int getHeight();
+    void setHeight(int h);
+};
+int Tower::getHeight()
 {
-    cout << Grphic::maximum << endl;
-    cout << "Interger Maximum : " << Math::maximum << endl;
-    cout << "Interger Add : " << Math::add(2,4) << endl;
+    return height;
+}
+void Tower::setHeight(int h)
+{
+    height = h;
+}
+
+int main()
+{
+    Tower myTower;
+    Tower seoulTower(100);
+    cout << "높이는" << myTower.getHeight() << "미터" << endl;
+    cout << "높이는" << seoulTower.getHeight() << "미터" <<endl;
+
 }

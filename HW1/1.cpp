@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     char str[10000];
-    int alphabet_list[26] = {};
+    int alphabet_list[26] = {}; // 0으로 초기화
     cout << "문자열 입력:";
     cin.getline(str, 10000, ';');
     int len = strlen(str);

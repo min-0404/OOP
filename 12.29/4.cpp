@@ -1,21 +1,26 @@
-// string 변수에 다양한 연산자를 사용할 수 있단느 것이 핵심
-// string은 배열 기반 이다
+// stoi()함수 사용법
 #include <iostream>
 #include <string>
 using namespace std;
 
-int main ()
+class Interger
 {
-    string song("Falling in love with you");
-    string elvis("Elvis Presely");
-    string singer;
+private:
+    int number;
+public:
+    Interger(int n) { number = n;}
+    Interger(string s) { number = stoi(s);}
+    void set(int n){ number = n;}
+    int get() { return number;}
+    bool isEven() { return number % 2 == 0 ? true:false;}
+};
 
-    cout << song + "를 부른 가수는";
-    cout << "힌트 : 첫글자는" << elvis[0] <<  "?";
-
-    getline(cin, singer);
-    if(singer == elvis)
-        cout << "맞았습니다";
-    else
-        cout << "틀렸습니다" + elvis + "입니다" << endl; 
+int main()
+{
+    Interger n(30);
+    cout << n.get() << " ";
+    n.set(50);
+    
+    cout << n.get() << " ";
+    Interger m("300");
 }
