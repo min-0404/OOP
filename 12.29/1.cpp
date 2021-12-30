@@ -12,14 +12,8 @@ public:
     int getHeight();
     void setHeight(int h);
 };
-int Tower::getHeight()
-{
-    return height;
-}
-void Tower::setHeight(int h)
-{
-    height = h;
-}
+int Tower::getHeight() { return height; }
+void Tower::setHeight(int h) { height = h; }
 
 int main()
 {

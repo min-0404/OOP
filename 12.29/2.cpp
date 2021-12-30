@@ -10,10 +10,7 @@ public:
     Complex(int x, int y): a(x), b(y) {}
     void ShowComplex(); 
 };
-void Complex::ShowComplex()
-{
-    cout << a << b << endl;
-}
+void Complex::ShowComplex() { cout << a << b << endl;}
 int main()
 {
     Complex x(4, 5);
