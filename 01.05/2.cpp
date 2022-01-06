@@ -1,4 +1,4 @@
-// static 멤버 변수와 멤버 함수를 구현해보자
+// "static 멤버 변수"와 "static 멤버 함수"를 구현해보자
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -15,8 +15,7 @@ public:
         sharedMoney += n;
     }
 };
-int Person::sharedMoney  = 10; //main 함수 전에 미리 static 멤버 변수 초기화
-
+int Person::sharedMoney  = 10; // 중요 : static 멤버 변수는 메인 함수 전에 꼭 초기화를 해놓아야함!!!!!
 int main(){
     Person han;
     han.money = 100;
@@ -29,6 +28,10 @@ int main(){
 
     cout << han.money << " " << lee.money << endl;
     cout << han.sharedMoney << " " << lee.sharedMoney << endl;
+
+    Person::addShared(500); // static은 객체뿐 아니라 클래스 자체에서 접근이 가능하다
+    cout << Person::sharedMoney << " " << han.sharedMoney << " " << lee.sharedMoney << endl; // 모두 동일
+
 }
 
 //static 멤버는 프로그램 시작할때 이미 만들어져있음

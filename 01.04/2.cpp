@@ -1,4 +1,5 @@
 // 1.cpp 를 깊은 복사를 정의해서 수정해보자
+// 깊은 복사를 구현할때 주로 참조자를 활용한다
 #include <iostream>
 #include <cstring>
 using namespace std;
