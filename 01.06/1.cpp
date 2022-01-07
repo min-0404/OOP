@@ -11,11 +11,11 @@ private:
     int width;
     int height;
 public:
-    Rect(int width, int height){
+    Rect(int width, int height){ // 생성자
         this -> width = width;
         this -> height = height;
     }
-    friend bool equals(Rect r, Rect s); // 프렌드 선언 : 이제 equals 함수는 Rect 클래스의 모든 것을 사용할 수 있다.
+    friend bool equals(Rect r, Rect s); // 프렌드 선언 : equals 함수는 클래스 외부에 있지만, Rect 클래스의 모든 것을 사용할 수 있다.
 };
 
 bool equals(Rect r, Rect s){ // 전역 함수

@@ -3,7 +3,6 @@
 using namespace std;
 
 class Rect; // 전방 선언
-
 class RectManager // 2개의 함수 가지고 있음
 {
 public:
@@ -40,7 +39,7 @@ int main(){
     Rect b(5,6);
     RectManager man;
 
-    man.copy(b,a);
+    man.copy(b,a); // b에 a의 모든 멤버변수 값을 복사
     if(man.equals(a,b))
         cout << "equal" << endl;
     else

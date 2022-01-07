@@ -23,7 +23,8 @@ Power operator+(Power op1, Power op2){
     temp.kick = op1.kick + op2.kick;
     temp.punch = op1.punch + op2.punch;
     return temp;
-    // 또는 그냥 귀찮게 쓰지 말고 한문장으로도 구현 가능: return Power(op1.kick + op2.kick, op1.punch + op2.punch);
+    // 또는 그냥 귀찮게 쓰지 말고 무명 객체 반환으로 구현 가능:
+    //return Power(op1.kick + op2.kick, op1.punch + op2.punch);
 }
 
 int main(){

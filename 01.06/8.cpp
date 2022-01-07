@@ -1,4 +1,4 @@
-// 퀴즈: 전역함수로 += 연산자 구현해보기
+// 퀴즈: "전역함수"로 += 연산자 구현해보기
 #include <iostream>
 using namespace std;
 
@@ -20,7 +20,6 @@ void Power::show(){
 }
 Power operator += (Power op1, Power op2){
     return Power(op1.kick + op2.kick, op1.punch + op2.punch);
-    // 또는 
 }
 
 int main(){

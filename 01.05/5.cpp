@@ -1,4 +1,4 @@
-// 접근 도형에 대해서 다시 생각해보는 문제
+// 수업시간에 배운 "접근 도형"에 대해서 다시 생각해보는 문제
 #include <iostream>
 using namespace std;
 

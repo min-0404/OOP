@@ -43,10 +43,10 @@ void readRadius_2(Circle& ref){
 int main()
 {
     Circle donut;
-    donut.readRadius_1(); // 멤버 함수 이용
+    donut.readRadius_1(); // 멤버 함수 이용해서 호출
     cout << donut.getArea() << endl;
 
     Circle pizza;
-    readRadius_2(pizza); // 독립 함수 이용
+    readRadius_2(pizza); // 독립 함수 이용해서 호출
     cout << pizza.getArea() << endl;
 }
