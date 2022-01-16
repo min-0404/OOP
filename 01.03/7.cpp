@@ -11,7 +11,7 @@ char& find(){ // c의 참조 변수를 반환한다.
 
 int main()
 {
-    char& ref = find();  // ref와 c는 같은 기억공간, 같은 값을 가짐. int& ref 로 선언했으므로
+    char& ref = find();  // ref와 c는 같은 기억공간, 같은 값을 가짐. char& ref 로 선언했으므로
     ref = 'm';
     cout << c << " " << ref << endl;
     
